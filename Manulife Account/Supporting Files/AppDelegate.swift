@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //switchToAccounts()
         showLaunchScreen()
         return true
     }
@@ -90,16 +91,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    func switchToAccounts() {
+        let accountsViewController: UINavigationController =
+            UINavigationController.initialViewControllerFromStoryboard(storyboard: .accountsViewController)
+        UIView.transition(with: window!, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            self.window?.rootViewController = accountsViewController
+        }, completion: { completed in
+            // maybe do something here
+        })
+    }
+    
     private func showLaunchScreen() {
-        var rootViewController: UIViewController = UIViewController.initialViewControllerFromStoryboard(storyboard: .launchViewController)
+        let launchScreen: LaunchViewController = LaunchViewController.instanceFromStoryboard(storyboard: .launchViewController)
         
-        if isLoggedIn() {
-            rootViewController = UIViewController.initialViewControllerFromStoryboard(storyboard: .accountsViewController)
-            setLoginStatus(with: true)
-        }
-        
-        window?.rootViewController = rootViewController
-        window?.makeKeyAndVisible()
+        UIView.transition(with: window!, duration: 0.3, options: .transitionCrossDissolve, animations: {
+            self.window?.rootViewController = launchScreen
+        }, completion: { completed in
+            // maybe do something here
+        })
+//
     }
 
 }

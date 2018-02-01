@@ -18,6 +18,10 @@
 		5F0D92CC2023AFD200D9FBEF /* LaunchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D92CB2023AFD200D9FBEF /* LaunchViewController.storyboard */; };
 		5F0D92CF2023B02100D9FBEF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92CE2023B02100D9FBEF /* UIViewExtensions.swift */; };
 		5F0D92D12023B04000D9FBEF /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92D02023B04000D9FBEF /* KeychainWrapper.swift */; };
+		5F0D92D32023B31400D9FBEF /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92D22023B31400D9FBEF /* AccountsViewController.swift */; };
+		5F0D92D52023B33900D9FBEF /* AccountsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D92D42023B33900D9FBEF /* AccountsViewController.storyboard */; };
+		5F0D92D72023BDB200D9FBEF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D92D62023BDB200D9FBEF /* Localizable.strings */; };
+		5F0D92D92023BE3200D9FBEF /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92D82023BE3200D9FBEF /* StringExtension.swift */; };
 		9647F050DBA4C71031B8BB89 /* Pods_Manulife_Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48634F8B316BE1FADF7C8A98 /* Pods_Manulife_Account.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +41,10 @@
 		5F0D92CB2023AFD200D9FBEF /* LaunchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchViewController.storyboard; sourceTree = "<group>"; };
 		5F0D92CE2023B02100D9FBEF /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		5F0D92D02023B04000D9FBEF /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		5F0D92D22023B31400D9FBEF /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		5F0D92D42023B33900D9FBEF /* AccountsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountsViewController.storyboard; sourceTree = "<group>"; };
+		5F0D92D62023BDB200D9FBEF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		5F0D92D82023BE3200D9FBEF /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		7DE6E9CD45A6A19805C2DF01 /* Pods-Manulife Account.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manulife Account.release.xcconfig"; path = "Pods/Target Support Files/Pods-Manulife Account/Pods-Manulife Account.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +120,8 @@
 			children = (
 				5F0D92C92023AFC500D9FBEF /* LaunchViewController.swift */,
 				5F0D92CB2023AFD200D9FBEF /* LaunchViewController.storyboard */,
+				5F0D92D22023B31400D9FBEF /* AccountsViewController.swift */,
+				5F0D92D42023B33900D9FBEF /* AccountsViewController.storyboard */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -135,6 +145,7 @@
 			children = (
 				5F0D92CD2023B01100D9FBEF /* Wrappers */,
 				5F0D92CE2023B02100D9FBEF /* UIViewExtensions.swift */,
+				5F0D92D82023BE3200D9FBEF /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -149,6 +160,7 @@
 		5F0D92C42023AF8100D9FBEF /* Localization */ = {
 			isa = PBXGroup;
 			children = (
+				5F0D92D62023BDB200D9FBEF /* Localizable.strings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -249,8 +261,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F0D92CC2023AFD200D9FBEF /* LaunchViewController.storyboard in Resources */,
+				5F0D92D72023BDB200D9FBEF /* Localizable.strings in Resources */,
 				5F0D92B52023A9D800D9FBEF /* LaunchScreen.storyboard in Resources */,
 				5F0D92B22023A9D800D9FBEF /* Assets.xcassets in Resources */,
+				5F0D92D52023B33900D9FBEF /* AccountsViewController.storyboard in Resources */,
 				5F0D92AD2023A9D800D9FBEF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,7 +329,9 @@
 				5F0D92B02023A9D800D9FBEF /* Manulife_Account.xcdatamodeld in Sources */,
 				5F0D92D12023B04000D9FBEF /* KeychainWrapper.swift in Sources */,
 				5F0D92AA2023A9D800D9FBEF /* ViewController.swift in Sources */,
+				5F0D92D92023BE3200D9FBEF /* StringExtension.swift in Sources */,
 				5F0D92CF2023B02100D9FBEF /* UIViewExtensions.swift in Sources */,
+				5F0D92D32023B31400D9FBEF /* AccountsViewController.swift in Sources */,
 				5F0D92A82023A9D800D9FBEF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
