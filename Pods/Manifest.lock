@@ -1,3 +1,34 @@
-PODFILE CHECKSUM: ad20f101db313a32621620b7916673bb6651249b
+PODS:
+  - Alamofire (4.5.1)
+  - AlamofireObjectMapper (5.0.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.0)
+  - ObjectMapper (3.0.0)
+  - SVProgressHUD (2.2.2)
+  - TextAttributes (1.0)
+
+DEPENDENCIES:
+  - AlamofireObjectMapper
+  - SVProgressHUD
+  - TextAttributes (from `https://github.com/ejmartin504/TextAttributes.git`, branch `swift4`)
+
+EXTERNAL SOURCES:
+  TextAttributes:
+    :branch: swift4
+    :git: https://github.com/ejmartin504/TextAttributes.git
+
+CHECKOUT OPTIONS:
+  TextAttributes:
+    :commit: 5103579729925acf896697d0f799dff4468d4a39
+    :git: https://github.com/ejmartin504/TextAttributes.git
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
+  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
+  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  TextAttributes: 45b2713a1d174c377d320b51129c304eac381638
+
+PODFILE CHECKSUM: cdc4a1bbb16586888537575140b59b95e91983ca
 
 COCOAPODS: 1.2.1

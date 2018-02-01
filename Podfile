@@ -6,5 +6,8 @@ target 'Manulife Account' do
   use_frameworks!
 
   # Pods for Manulife Account
+  pod 'AlamofireObjectMapper'
+  pod 'TextAttributes', :git => 'https://github.com/ejmartin504/TextAttributes.git', :branch => 'swift4'
+  pod 'SVProgressHUD'
 
 end

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class AccountsViewController: UIViewController {
 
@@ -28,5 +29,17 @@ class AccountsViewController: UIViewController {
             // Fallback on earlier versions
         }
         
+    }
+    
+    func retrieveAccounts() {
+        SVProgressHUD.show()
+        BankService.retrieveAccounts { (response) in
+            SVProgressHUD.dismiss()
+            if response.error != nil {
+                print(response.result.value)
+            } else {
+                SVProgressHUD.showError(withStatus: "PLACEHOLDER")
+            }
+        }
     }
 }

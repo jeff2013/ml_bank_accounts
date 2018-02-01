@@ -18,15 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ASDASD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIy-7b-dYM">
-                                <rect key="frame" x="166" y="323" width="67" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Z3-Fa-GNL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Z3-Fa-GNL" firstAttribute="top" secondItem="MxL-17-7Fy" secondAttribute="top" id="01V-bv-da6"/>
+                            <constraint firstItem="1Z3-Fa-GNL" firstAttribute="leading" secondItem="MxL-17-7Fy" secondAttribute="leading" id="5sQ-kr-0z6"/>
+                            <constraint firstItem="1Z3-Fa-GNL" firstAttribute="trailing" secondItem="MxL-17-7Fy" secondAttribute="trailing" id="ePU-UZ-Yib"/>
+                            <constraint firstItem="1Z3-Fa-GNL" firstAttribute="bottom" secondItem="MxL-17-7Fy" secondAttribute="bottom" id="vTx-XU-SRD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MxL-17-7Fy"/>
                     </view>
                     <navigationItem key="navigationItem" title="HI" id="MFh-eW-qm3">

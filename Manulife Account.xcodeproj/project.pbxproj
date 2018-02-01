@@ -22,6 +22,12 @@
 		5F0D92D52023B33900D9FBEF /* AccountsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D92D42023B33900D9FBEF /* AccountsViewController.storyboard */; };
 		5F0D92D72023BDB200D9FBEF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D92D62023BDB200D9FBEF /* Localizable.strings */; };
 		5F0D92D92023BE3200D9FBEF /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92D82023BE3200D9FBEF /* StringExtension.swift */; };
+		5F0D92DD2023C0B000D9FBEF /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92DC2023C0B000D9FBEF /* Account.swift */; };
+		5F0D92DF2023C1D600D9FBEF /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92DE2023C1D600D9FBEF /* Activity.swift */; };
+		5F0D92E12023C3C500D9FBEF /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92E02023C3C500D9FBEF /* Transaction.swift */; };
+		5F0D92E32023C48800D9FBEF /* BankService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92E22023C48800D9FBEF /* BankService.swift */; };
+		5F0D92E72023D14400D9FBEF /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92E52023D14400D9FBEF /* AccountTableViewCell.swift */; };
+		5F0D92E82023D14400D9FBEF /* AccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D92E62023D14400D9FBEF /* AccountTableViewCell.xib */; };
 		9647F050DBA4C71031B8BB89 /* Pods_Manulife_Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48634F8B316BE1FADF7C8A98 /* Pods_Manulife_Account.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +51,12 @@
 		5F0D92D42023B33900D9FBEF /* AccountsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountsViewController.storyboard; sourceTree = "<group>"; };
 		5F0D92D62023BDB200D9FBEF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		5F0D92D82023BE3200D9FBEF /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		5F0D92DC2023C0B000D9FBEF /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		5F0D92DE2023C1D600D9FBEF /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		5F0D92E02023C3C500D9FBEF /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		5F0D92E22023C48800D9FBEF /* BankService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankService.swift; sourceTree = "<group>"; };
+		5F0D92E52023D14400D9FBEF /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		5F0D92E62023D14400D9FBEF /* AccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
 		7DE6E9CD45A6A19805C2DF01 /* Pods-Manulife Account.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manulife Account.release.xcconfig"; path = "Pods/Target Support Files/Pods-Manulife Account/Pods-Manulife Account.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +141,7 @@
 		5F0D92BE2023AF4D00D9FBEF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5F0D92E42023D12400D9FBEF /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,6 +149,7 @@
 		5F0D92BF2023AF5A00D9FBEF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5F0D92DB2023C00200D9FBEF /* API */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -170,6 +184,9 @@
 			children = (
 				5F0D92C62023AF9D00D9FBEF /* Protocols */,
 				5F0D92C72023AFAA00D9FBEF /* Storyboard.swift */,
+				5F0D92DC2023C0B000D9FBEF /* Account.swift */,
+				5F0D92DE2023C1D600D9FBEF /* Activity.swift */,
+				5F0D92E02023C3C500D9FBEF /* Transaction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,6 +204,23 @@
 				5F0D92D02023B04000D9FBEF /* KeychainWrapper.swift */,
 			);
 			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		5F0D92DB2023C00200D9FBEF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5F0D92E22023C48800D9FBEF /* BankService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		5F0D92E42023D12400D9FBEF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5F0D92E52023D14400D9FBEF /* AccountTableViewCell.swift */,
+				5F0D92E62023D14400D9FBEF /* AccountTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		7BE84511B3D35B53442131F0 /* Pods */ = {
@@ -265,6 +299,7 @@
 				5F0D92B52023A9D800D9FBEF /* LaunchScreen.storyboard in Resources */,
 				5F0D92B22023A9D800D9FBEF /* Assets.xcassets in Resources */,
 				5F0D92D52023B33900D9FBEF /* AccountsViewController.storyboard in Resources */,
+				5F0D92E82023D14400D9FBEF /* AccountTableViewCell.xib in Resources */,
 				5F0D92AD2023A9D800D9FBEF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,13 +359,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F0D92DF2023C1D600D9FBEF /* Activity.swift in Sources */,
 				5F0D92C82023AFAA00D9FBEF /* Storyboard.swift in Sources */,
+				5F0D92E12023C3C500D9FBEF /* Transaction.swift in Sources */,
 				5F0D92CA2023AFC500D9FBEF /* LaunchViewController.swift in Sources */,
 				5F0D92B02023A9D800D9FBEF /* Manulife_Account.xcdatamodeld in Sources */,
 				5F0D92D12023B04000D9FBEF /* KeychainWrapper.swift in Sources */,
 				5F0D92AA2023A9D800D9FBEF /* ViewController.swift in Sources */,
+				5F0D92E32023C48800D9FBEF /* BankService.swift in Sources */,
+				5F0D92DD2023C0B000D9FBEF /* Account.swift in Sources */,
 				5F0D92D92023BE3200D9FBEF /* StringExtension.swift in Sources */,
 				5F0D92CF2023B02100D9FBEF /* UIViewExtensions.swift in Sources */,
+				5F0D92E72023D14400D9FBEF /* AccountTableViewCell.swift in Sources */,
 				5F0D92D32023B31400D9FBEF /* AccountsViewController.swift in Sources */,
 				5F0D92A82023A9D800D9FBEF /* AppDelegate.swift in Sources */,
 			);
