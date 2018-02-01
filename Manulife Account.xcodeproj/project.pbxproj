@@ -28,6 +28,9 @@
 		5F0D92E32023C48800D9FBEF /* BankService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92E22023C48800D9FBEF /* BankService.swift */; };
 		5F0D92E72023D14400D9FBEF /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92E52023D14400D9FBEF /* AccountTableViewCell.swift */; };
 		5F0D92E82023D14400D9FBEF /* AccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D92E62023D14400D9FBEF /* AccountTableViewCell.xib */; };
+		5F0D92EA2023D21100D9FBEF /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92E92023D21100D9FBEF /* UITableViewExtension.swift */; };
+		5F0D92EC2023D27000D9FBEF /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92EB2023D27000D9FBEF /* ReusableView.swift */; };
+		5F0D92EE2023D2B000D9FBEF /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92ED2023D2B000D9FBEF /* ConfigurableCell.swift */; };
 		9647F050DBA4C71031B8BB89 /* Pods_Manulife_Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48634F8B316BE1FADF7C8A98 /* Pods_Manulife_Account.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,9 @@
 		5F0D92E22023C48800D9FBEF /* BankService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankService.swift; sourceTree = "<group>"; };
 		5F0D92E52023D14400D9FBEF /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 		5F0D92E62023D14400D9FBEF /* AccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
+		5F0D92E92023D21100D9FBEF /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		5F0D92EB2023D27000D9FBEF /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		5F0D92ED2023D2B000D9FBEF /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		7DE6E9CD45A6A19805C2DF01 /* Pods-Manulife Account.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manulife Account.release.xcconfig"; path = "Pods/Target Support Files/Pods-Manulife Account/Pods-Manulife Account.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +166,7 @@
 				5F0D92CD2023B01100D9FBEF /* Wrappers */,
 				5F0D92CE2023B02100D9FBEF /* UIViewExtensions.swift */,
 				5F0D92D82023BE3200D9FBEF /* StringExtension.swift */,
+				5F0D92E92023D21100D9FBEF /* UITableViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -194,6 +201,8 @@
 		5F0D92C62023AF9D00D9FBEF /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				5F0D92EB2023D27000D9FBEF /* ReusableView.swift */,
+				5F0D92ED2023D2B000D9FBEF /* ConfigurableCell.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -365,10 +374,13 @@
 				5F0D92CA2023AFC500D9FBEF /* LaunchViewController.swift in Sources */,
 				5F0D92B02023A9D800D9FBEF /* Manulife_Account.xcdatamodeld in Sources */,
 				5F0D92D12023B04000D9FBEF /* KeychainWrapper.swift in Sources */,
+				5F0D92EA2023D21100D9FBEF /* UITableViewExtension.swift in Sources */,
+				5F0D92EE2023D2B000D9FBEF /* ConfigurableCell.swift in Sources */,
 				5F0D92AA2023A9D800D9FBEF /* ViewController.swift in Sources */,
 				5F0D92E32023C48800D9FBEF /* BankService.swift in Sources */,
 				5F0D92DD2023C0B000D9FBEF /* Account.swift in Sources */,
 				5F0D92D92023BE3200D9FBEF /* StringExtension.swift in Sources */,
+				5F0D92EC2023D27000D9FBEF /* ReusableView.swift in Sources */,
 				5F0D92CF2023B02100D9FBEF /* UIViewExtensions.swift in Sources */,
 				5F0D92E72023D14400D9FBEF /* AccountTableViewCell.swift in Sources */,
 				5F0D92D32023B31400D9FBEF /* AccountsViewController.swift in Sources */,

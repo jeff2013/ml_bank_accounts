@@ -10,6 +10,9 @@ import UIKit
 
 class AccountTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var accountNameLabel: UILabel!
+    @IBOutlet weak var accountIDLabel: UILabel!
+    @IBOutlet weak var accountBalanceLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +24,12 @@ class AccountTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+extension AccountTableViewCell: ConfigurableTableViewCellProtocol {
+    typealias configurableObject = Account
+    
+    func configureCell(object: Account) {
+        
+    }
 }

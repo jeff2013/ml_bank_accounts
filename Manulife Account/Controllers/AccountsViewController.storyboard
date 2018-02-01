@@ -21,6 +21,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Z3-Fa-GNL">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="i0y-xc-zMo" id="qYl-R1-iAS"/>
+                                    <outlet property="delegate" destination="i0y-xc-zMo" id="B6T-e2-7xU"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -35,6 +39,9 @@
                     <navigationItem key="navigationItem" title="HI" id="MFh-eW-qm3">
                         <barButtonItem key="rightBarButtonItem" title="QUIT_P" id="qKW-dH-Fly"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="accountsTableView" destination="1Z3-Fa-GNL" id="KWD-Xn-YdE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0c-Y3-HRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

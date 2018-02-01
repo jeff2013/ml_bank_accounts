@@ -9,8 +9,29 @@
 import UIKit
 import SVProgressHUD
 
+enum AccountTypes: Int {
+    case deposit
+    case investments
+    case count
+    
+    func description() -> String {
+        switch self {
+        case .deposit:
+            return "Accounts.Type.Deposit".localized
+        case .investments:
+            return "Accounts.Type.Investments".localized
+        default:
+            return ""
+        }
+    }
+}
+
 class AccountsViewController: UIViewController {
 
+    @IBOutlet weak var accountsTableView: UITableView!
+    
+    var accounts: [Account] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,10 +57,35 @@ class AccountsViewController: UIViewController {
         BankService.retrieveAccounts { (response) in
             SVProgressHUD.dismiss()
             if response.error != nil {
-                print(response.result.value)
+                if let accounts = response.value {
+                    self.accounts = accounts
+                    self.accountsTableView.reloadData()
+                } else {
+                    //no accounts retrieved, could show some sort of notification that there are none available
+                }
             } else {
                 SVProgressHUD.showError(withStatus: "PLACEHOLDER")
             }
         }
+    }
+}
+
+extension AccountsViewController: UITableViewDelegate {
+    
+}
+
+extension AccountsViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return AccountTypes.count.rawValue
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return accounts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let accountCell: AccountTableViewCell = tableView.dequeueReusableCell(type: AccountTableViewCell.self) as! AccountTableViewCell
+        accountCell.configureCell(object: accounts[indexPath.row])
+        return accountCell
     }
 }

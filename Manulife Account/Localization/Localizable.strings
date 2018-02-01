@@ -13,3 +13,5 @@
 
 //Accounts
 "Accounts.Navigation.Title" = "Manulife";
+"Accounts.Type.Deposit" = "Deposit Accounts";
+"Accounts.Type.Investments" = "Investments";
