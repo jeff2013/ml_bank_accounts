@@ -13,9 +13,17 @@
 		5F0D92B02023A9D800D9FBEF /* Manulife_Account.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92AE2023A9D800D9FBEF /* Manulife_Account.xcdatamodeld */; };
 		5F0D92B22023A9D800D9FBEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D92B12023A9D800D9FBEF /* Assets.xcassets */; };
 		5F0D92B52023A9D800D9FBEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D92B32023A9D800D9FBEF /* LaunchScreen.storyboard */; };
+		5F0D92C82023AFAA00D9FBEF /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92C72023AFAA00D9FBEF /* Storyboard.swift */; };
+		5F0D92CA2023AFC500D9FBEF /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92C92023AFC500D9FBEF /* LaunchViewController.swift */; };
+		5F0D92CC2023AFD200D9FBEF /* LaunchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D92CB2023AFD200D9FBEF /* LaunchViewController.storyboard */; };
+		5F0D92CF2023B02100D9FBEF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92CE2023B02100D9FBEF /* UIViewExtensions.swift */; };
+		5F0D92D12023B04000D9FBEF /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92D02023B04000D9FBEF /* KeychainWrapper.swift */; };
+		9647F050DBA4C71031B8BB89 /* Pods_Manulife_Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48634F8B316BE1FADF7C8A98 /* Pods_Manulife_Account.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2338F2FB3E96D9CCFA245BC2 /* Pods-Manulife Account.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manulife Account.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Manulife Account/Pods-Manulife Account.debug.xcconfig"; sourceTree = "<group>"; };
+		48634F8B316BE1FADF7C8A98 /* Pods_Manulife_Account.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Manulife_Account.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F0D92A42023A9D800D9FBEF /* Manulife Account.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Manulife Account.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F0D92A72023A9D800D9FBEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F0D92A92023A9D800D9FBEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +32,12 @@
 		5F0D92B12023A9D800D9FBEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F0D92B42023A9D800D9FBEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F0D92B62023A9D800D9FBEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F0D92C72023AFAA00D9FBEF /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		5F0D92C92023AFC500D9FBEF /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		5F0D92CB2023AFD200D9FBEF /* LaunchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchViewController.storyboard; sourceTree = "<group>"; };
+		5F0D92CE2023B02100D9FBEF /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		5F0D92D02023B04000D9FBEF /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		7DE6E9CD45A6A19805C2DF01 /* Pods-Manulife Account.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manulife Account.release.xcconfig"; path = "Pods/Target Support Files/Pods-Manulife Account/Pods-Manulife Account.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9647F050DBA4C71031B8BB89 /* Pods_Manulife_Account.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0196C12523F7D8BBACAF7371 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48634F8B316BE1FADF7C8A98 /* Pods_Manulife_Account.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5F0D929B2023A9D800D9FBEF = {
 			isa = PBXGroup;
 			children = (
-				5F0D92A62023A9D800D9FBEF /* Manulife Account */,
+				5F0D92BC2023AD3D00D9FBEF /* Manulife Account */,
 				5F0D92A52023A9D800D9FBEF /* Products */,
+				7BE84511B3D35B53442131F0 /* Pods */,
+				0196C12523F7D8BBACAF7371 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,7 +78,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5F0D92A62023A9D800D9FBEF /* Manulife Account */ = {
+		5F0D92A62023A9D800D9FBEF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				5F0D92A72023A9D800D9FBEF /* AppDelegate.swift */,
@@ -64,7 +89,101 @@
 				5F0D92B62023A9D800D9FBEF /* Info.plist */,
 				5F0D92AE2023A9D800D9FBEF /* Manulife_Account.xcdatamodeld */,
 			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F0D92BC2023AD3D00D9FBEF /* Manulife Account */ = {
+			isa = PBXGroup;
+			children = (
+				5F0D92C52023AF8600D9FBEF /* Model */,
+				5F0D92C42023AF8100D9FBEF /* Localization */,
+				5F0D92C32023AF7D00D9FBEF /* Style */,
+				5F0D92C22023AF7500D9FBEF /* Extensions */,
+				5F0D92BF2023AF5A00D9FBEF /* Services */,
+				5F0D92BE2023AF4D00D9FBEF /* Views */,
+				5F0D92BD2023AF4900D9FBEF /* Controllers */,
+				5F0D92A62023A9D800D9FBEF /* Supporting Files */,
+			);
 			path = "Manulife Account";
+			sourceTree = "<group>";
+		};
+		5F0D92BD2023AF4900D9FBEF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5F0D92C92023AFC500D9FBEF /* LaunchViewController.swift */,
+				5F0D92CB2023AFD200D9FBEF /* LaunchViewController.storyboard */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5F0D92BE2023AF4D00D9FBEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5F0D92BF2023AF5A00D9FBEF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5F0D92C22023AF7500D9FBEF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5F0D92CD2023B01100D9FBEF /* Wrappers */,
+				5F0D92CE2023B02100D9FBEF /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5F0D92C32023AF7D00D9FBEF /* Style */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		5F0D92C42023AF8100D9FBEF /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		5F0D92C52023AF8600D9FBEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5F0D92C62023AF9D00D9FBEF /* Protocols */,
+				5F0D92C72023AFAA00D9FBEF /* Storyboard.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5F0D92C62023AF9D00D9FBEF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5F0D92CD2023B01100D9FBEF /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				5F0D92D02023B04000D9FBEF /* KeychainWrapper.swift */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		7BE84511B3D35B53442131F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2338F2FB3E96D9CCFA245BC2 /* Pods-Manulife Account.debug.xcconfig */,
+				7DE6E9CD45A6A19805C2DF01 /* Pods-Manulife Account.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F0D92B92023A9D800D9FBEF /* Build configuration list for PBXNativeTarget "Manulife Account" */;
 			buildPhases = (
+				749F9D5B3D8DDC416AC130C1 /* [CP] Check Pods Manifest.lock */,
 				5F0D92A02023A9D800D9FBEF /* Sources */,
 				5F0D92A12023A9D800D9FBEF /* Frameworks */,
 				5F0D92A22023A9D800D9FBEF /* Resources */,
+				DAE51FEAA970CEB7DA6B9898 /* [CP] Embed Pods Frameworks */,
+				FD5293537CE76A739745B34A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F0D92CC2023AFD200D9FBEF /* LaunchViewController.storyboard in Resources */,
 				5F0D92B52023A9D800D9FBEF /* LaunchScreen.storyboard in Resources */,
 				5F0D92B22023A9D800D9FBEF /* Assets.xcassets in Resources */,
 				5F0D92AD2023A9D800D9FBEF /* Main.storyboard in Resources */,
@@ -134,13 +257,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		749F9D5B3D8DDC416AC130C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DAE51FEAA970CEB7DA6B9898 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Manulife Account/Pods-Manulife Account-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD5293537CE76A739745B34A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Manulife Account/Pods-Manulife Account-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5F0D92A02023A9D800D9FBEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F0D92C82023AFAA00D9FBEF /* Storyboard.swift in Sources */,
+				5F0D92CA2023AFC500D9FBEF /* LaunchViewController.swift in Sources */,
 				5F0D92B02023A9D800D9FBEF /* Manulife_Account.xcdatamodeld in Sources */,
+				5F0D92D12023B04000D9FBEF /* KeychainWrapper.swift in Sources */,
 				5F0D92AA2023A9D800D9FBEF /* ViewController.swift in Sources */,
+				5F0D92CF2023B02100D9FBEF /* UIViewExtensions.swift in Sources */,
 				5F0D92A82023A9D800D9FBEF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,10 +451,13 @@
 		};
 		5F0D92BA2023A9D800D9FBEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2338F2FB3E96D9CCFA245BC2 /* Pods-Manulife Account.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Manulife Account/Info.plist";
+				DEVELOPMENT_TEAM = Q7V5PH8THE;
+				INFOPLIST_FILE = "Manulife Account/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jeff.Manulife-Account";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,10 +468,13 @@
 		};
 		5F0D92BB2023A9D800D9FBEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DE6E9CD45A6A19805C2DF01 /* Pods-Manulife Account.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Manulife Account/Info.plist";
+				DEVELOPMENT_TEAM = Q7V5PH8THE;
+				INFOPLIST_FILE = "Manulife Account/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jeff.Manulife-Account";
 				PRODUCT_NAME = "$(TARGET_NAME)";

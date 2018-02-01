@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        showLaunchScreen()
         return true
     }
 
@@ -87,6 +88,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    private func showLaunchScreen() {
+        var rootViewController: UINavigationController = UINavigationController.initialViewControllerFromStoryboard(storyboard: .launchViewController)
+        
+        if isLoggedIn() {
+            rootViewController = UINavigationController.initialViewControllerFromStoryboard(storyboard: .accountsViewController)
+            setLoginStatus(with: true)
+        }
+        
+        window?.rootViewController = rootViewController
+        window?.makeKeyAndVisible()
     }
 
 }
