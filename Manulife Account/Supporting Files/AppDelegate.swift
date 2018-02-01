@@ -91,10 +91,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func showLaunchScreen() {
-        var rootViewController: UINavigationController = UINavigationController.initialViewControllerFromStoryboard(storyboard: .launchViewController)
+        var rootViewController: UIViewController = UIViewController.initialViewControllerFromStoryboard(storyboard: .launchViewController)
         
         if isLoggedIn() {
-            rootViewController = UINavigationController.initialViewControllerFromStoryboard(storyboard: .accountsViewController)
+            rootViewController = UIViewController.initialViewControllerFromStoryboard(storyboard: .accountsViewController)
             setLoginStatus(with: true)
         }
         
