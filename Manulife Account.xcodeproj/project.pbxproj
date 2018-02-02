@@ -31,6 +31,11 @@
 		5F0D92EA2023D21100D9FBEF /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92E92023D21100D9FBEF /* UITableViewExtension.swift */; };
 		5F0D92EC2023D27000D9FBEF /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92EB2023D27000D9FBEF /* ReusableView.swift */; };
 		5F0D92EE2023D2B000D9FBEF /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92ED2023D2B000D9FBEF /* ConfigurableCell.swift */; };
+		5F0D92F02023DFBA00D9FBEF /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92EF2023DFBA00D9FBEF /* Font.swift */; };
+		5F0D92F22023DFE100D9FBEF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92F12023DFE100D9FBEF /* Color.swift */; };
+		5F0D92F42023E02900D9FBEF /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92F32023E02900D9FBEF /* Style.swift */; };
+		5F0D92FB2023E9D600D9FBEF /* SimpleSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92F92023E9D600D9FBEF /* SimpleSectionTableViewCell.swift */; };
+		5F0D92FC2023E9D600D9FBEF /* SimpleSectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D92FA2023E9D600D9FBEF /* SimpleSectionTableViewCell.xib */; };
 		9647F050DBA4C71031B8BB89 /* Pods_Manulife_Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48634F8B316BE1FADF7C8A98 /* Pods_Manulife_Account.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +68,11 @@
 		5F0D92E92023D21100D9FBEF /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		5F0D92EB2023D27000D9FBEF /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		5F0D92ED2023D2B000D9FBEF /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		5F0D92EF2023DFBA00D9FBEF /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		5F0D92F12023DFE100D9FBEF /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		5F0D92F32023E02900D9FBEF /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		5F0D92F92023E9D600D9FBEF /* SimpleSectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSectionTableViewCell.swift; sourceTree = "<group>"; };
+		5F0D92FA2023E9D600D9FBEF /* SimpleSectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleSectionTableViewCell.xib; sourceTree = "<group>"; };
 		7DE6E9CD45A6A19805C2DF01 /* Pods-Manulife Account.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manulife Account.release.xcconfig"; path = "Pods/Target Support Files/Pods-Manulife Account/Pods-Manulife Account.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +184,9 @@
 		5F0D92C32023AF7D00D9FBEF /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				5F0D92EF2023DFBA00D9FBEF /* Font.swift */,
+				5F0D92F12023DFE100D9FBEF /* Color.swift */,
+				5F0D92F32023E02900D9FBEF /* Style.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -228,6 +241,8 @@
 			children = (
 				5F0D92E52023D14400D9FBEF /* AccountTableViewCell.swift */,
 				5F0D92E62023D14400D9FBEF /* AccountTableViewCell.xib */,
+				5F0D92F92023E9D600D9FBEF /* SimpleSectionTableViewCell.swift */,
+				5F0D92FA2023E9D600D9FBEF /* SimpleSectionTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -304,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F0D92CC2023AFD200D9FBEF /* LaunchViewController.storyboard in Resources */,
+				5F0D92FC2023E9D600D9FBEF /* SimpleSectionTableViewCell.xib in Resources */,
 				5F0D92D72023BDB200D9FBEF /* Localizable.strings in Resources */,
 				5F0D92B52023A9D800D9FBEF /* LaunchScreen.storyboard in Resources */,
 				5F0D92B22023A9D800D9FBEF /* Assets.xcassets in Resources */,
@@ -374,17 +390,21 @@
 				5F0D92CA2023AFC500D9FBEF /* LaunchViewController.swift in Sources */,
 				5F0D92B02023A9D800D9FBEF /* Manulife_Account.xcdatamodeld in Sources */,
 				5F0D92D12023B04000D9FBEF /* KeychainWrapper.swift in Sources */,
+				5F0D92FB2023E9D600D9FBEF /* SimpleSectionTableViewCell.swift in Sources */,
 				5F0D92EA2023D21100D9FBEF /* UITableViewExtension.swift in Sources */,
 				5F0D92EE2023D2B000D9FBEF /* ConfigurableCell.swift in Sources */,
 				5F0D92AA2023A9D800D9FBEF /* ViewController.swift in Sources */,
 				5F0D92E32023C48800D9FBEF /* BankService.swift in Sources */,
 				5F0D92DD2023C0B000D9FBEF /* Account.swift in Sources */,
+				5F0D92F22023DFE100D9FBEF /* Color.swift in Sources */,
 				5F0D92D92023BE3200D9FBEF /* StringExtension.swift in Sources */,
 				5F0D92EC2023D27000D9FBEF /* ReusableView.swift in Sources */,
 				5F0D92CF2023B02100D9FBEF /* UIViewExtensions.swift in Sources */,
+				5F0D92F02023DFBA00D9FBEF /* Font.swift in Sources */,
 				5F0D92E72023D14400D9FBEF /* AccountTableViewCell.swift in Sources */,
 				5F0D92D32023B31400D9FBEF /* AccountsViewController.swift in Sources */,
 				5F0D92A82023A9D800D9FBEF /* AppDelegate.swift in Sources */,
+				5F0D92F42023E02900D9FBEF /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
