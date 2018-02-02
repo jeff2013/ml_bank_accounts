@@ -7,6 +7,7 @@
 */
 
 //General
+"General.Close";
 
 //Launch
 "Launch.Open" = "Open";
@@ -15,3 +16,4 @@
 "Accounts.Navigation.Title" = "Manulife";
 "Accounts.Type.Deposit" = "Deposit Accounts";
 "Accounts.Type.Investments" = "Investments";
+"Accounts.Total" = "TOTAL CAD $ ACCOUNTS";

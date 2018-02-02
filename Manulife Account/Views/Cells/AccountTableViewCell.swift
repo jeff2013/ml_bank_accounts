@@ -13,6 +13,7 @@ class AccountTableViewCell: UITableViewCell {
     @IBOutlet weak var accountNameLabel: UILabel!
     @IBOutlet weak var accountIDLabel: UILabel!
     @IBOutlet weak var accountBalanceLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,9 +30,11 @@ class AccountTableViewCell: UITableViewCell {
 extension AccountTableViewCell: ConfigurableTableViewCellProtocol {
     typealias configurableObject = Account
     
-    func configureCell(object: Account) {
+    // Not the best way to handle optional variables, may change later depending on time
+    // Should be using optional chaining
+    func configureCell(object: configurableObject) {
         accountNameLabel.attributedText = object.displayName.localized.styled(.cellTitle)
-        accountIDLabel.attributedText = String(object.id).styled(.cellSubtitle)
-        accountBalanceLabel.attributedText = object.balance > 0 ? "$\(String(object.balance))".styled(.balanceTitlePositive) : "$\(String(object.balance))".styled(.balanceTitleNegative)
+        accountIDLabel.attributedText = object.id != nil ? String(object.id).styled(.cellSubtitle) : "".styled(.cellSubtitle)
+        accountBalanceLabel.attributedText = object.balance > 0 ? object.balance.formatCurrency().styled(.balanceTitlePositive) : object.balance.formatCurrency().styled(.balanceTitleNegative)
     }
 }

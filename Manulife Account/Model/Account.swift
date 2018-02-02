@@ -18,6 +18,11 @@ class Account: Mappable {
     
     required init?(map: Map) {}
     
+    init(displayName: String, balance: Double) {
+        self.displayName = displayName
+        self.balance = balance
+    }
+    
     func mapping(map: Map) {
         id <- map["id"]
         displayName <- map["display_name"]

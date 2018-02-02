@@ -9,7 +9,7 @@
 import UIKit
 import SVProgressHUD
 
-enum AccountTypes: Int {
+enum AccountCategories: Int {
     case deposit
     case investments
     case count
@@ -70,11 +70,11 @@ class AccountsViewController: UIViewController {
     }
     
     func setupTableView() {
-        accountsTableView.registerCellType(type: AccountTableViewCell.self)
-        accountsTableView.registerCellType(type: SimpleSectionTableViewCell.self)
+        accountsTableView.registerCellTypes(types: [AccountTableViewCell.self, SimpleSectionTableViewCell.self, SimpleFooterTableViewCell.self])
         accountsTableView.tableFooterView = UIView()
         accountsTableView.estimatedRowHeight = 200
         accountsTableView.estimatedSectionHeaderHeight = 200
+        accountsTableView.estimatedSectionFooterHeight = 200
     }
     
     func retrieveAccounts() {
@@ -93,23 +93,51 @@ class AccountsViewController: UIViewController {
             }
         }
     }
+    
+    func getAccounts(for section: Int) -> [Account] {
+        var accountsForSection: [Account] = []
+        switch AccountCategories(rawValue: section)! {
+        case .deposit:
+            accountsForSection = depositAccounts
+        case .investments:
+            accountsForSection = investmentAccounts
+        default:
+            break
+        }
+        return accountsForSection
+    }
 }
 
 extension AccountsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var accountsForSection: [Account] = getAccounts(for: indexPath.section)
+        AccountTypes(rawValue: accountsForSection[indexPath.row].id)
+    }
     
 }
 
 extension AccountsViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return AccountTypes.count.rawValue
+        return AccountCategories.count.rawValue
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerCell: SimpleFooterTableViewCell = tableView.dequeueReusableCell(type: SimpleFooterTableViewCell.self)
+        let accountsForSection: [Account] = getAccounts(for: section)
+        let accountsTotal = accountsForSection.reduce(0.0) { (total, account) -> Double in
+            total + account.balance
+        }
+        footerCell.configureCell(object: accountsTotal)
+        return footerCell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let simpleSectionCell: SimpleSectionTableViewCell = tableView.dequeueReusableCell(type: SimpleSectionTableViewCell.self)
         
-        switch AccountTypes(rawValue: section)! {
+        switch AccountCategories(rawValue: section)! {
         case .deposit:
              simpleSectionCell.configureCell(object: ("Accounts.Type.Deposit".localized, depositAccounts.count))
         case .investments:
@@ -121,7 +149,7 @@ extension AccountsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch AccountTypes(rawValue: section)! {
+        switch AccountCategories(rawValue: section)! {
         case .deposit:
             return depositAccounts.count
         case .investments:
@@ -132,15 +160,8 @@ extension AccountsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var accountsForSection: [Account] = []
-        switch AccountTypes(rawValue: indexPath.section)! {
-        case .deposit:
-            accountsForSection = depositAccounts
-        case .investments:
-            accountsForSection = investmentAccounts
-        default:
-            break
-        }
+        var accountsForSection: [Account] = getAccounts(for: indexPath.section)
+        
         let accountCell: AccountTableViewCell = tableView.dequeueReusableCell(type: AccountTableViewCell.self)
         accountCell.configureCell(object: accountsForSection[indexPath.row])
         return accountCell
@@ -151,6 +172,10 @@ extension AccountsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return UITableViewAutomaticDimension
     }
 }

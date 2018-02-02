@@ -10,6 +10,23 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
+enum AccountTypes: Int {
+    case chequing = 10
+    case savings = 12
+    case investments = 19
+    
+    func urlExtension() -> String {
+        switch self {
+        case .chequing:
+            return "chequingAccount.json"
+        case .savings:
+            return "savingsAccount.json"
+        case .investments:
+            return "TfsaAccount.json"
+        }
+    }
+}
+
 class BankService {
     
     class func retrieveAccounts(completion: @escaping(DataResponse<[Account]>) -> Void) {
@@ -19,15 +36,10 @@ class BankService {
         }
     }
     
-//    class func getNearbyRestaurants(location: CLLocationCoordinate2D, radius: String, type: String, keyword: String, completion: @escaping(DataResponse<Places>) -> Void) {
-//        let baseURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
-//
-//        let parameters: [String: Any] = ["location": "\(location.latitude),\(location.longitude)", "radius": radius, "type": type, "keyword": keyword, "key": "AIzaSyBpVerz2iMPKNk864KkuzmC6UcMlPSPyDw"]
-//
-//        Alamofire.request(baseURL, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseObject { (response: DataResponse<Places>) in
-//            print(response.request)
-//            completion(response)
-//        }
-//    }
-    
+    class func retrieveTransactions(for account: AccountTypes, completion: @escaping(DataResponse<[Transaction]>) -> Void) {
+        let baseURL:String = "https://raw.githubusercontent.com/seyDoggy/ml-app-challenge/master/data/" + account.urlExtension()
+        Alamofire.request(baseURL, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseArray { (response: DataResponse<[Transaction]>) in
+            completion(response)
+        }
+    }
 }

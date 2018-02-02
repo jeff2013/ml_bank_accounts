@@ -15,6 +15,7 @@ indirect enum Style: Int {
     case titleHeader
     case cellTitle
     case cellSubtitle
+    case greyTitle19pt
     case balanceTitlePositive
     case balanceTitleNegative
 }
@@ -43,6 +44,11 @@ class StyleGuide {
                 .font(UIFont(.helveticaNeueMedium, size: 13))
                 .foregroundColor(UIColor(.warmGrey))
                 .alignment(.left)
+        case .greyTitle19pt:
+            return TextAttributes()
+                .font(UIFont(.helveticaNeueMedium, size: 19))
+                .foregroundColor(UIColor(.darkTwo))
+                .alignment(.left)
         case .balanceTitlePositive:
             return TextAttributes()
                 .font(UIFont(.helveticaNeueMedium, size: 22))
@@ -53,6 +59,7 @@ class StyleGuide {
                 .font(UIFont(.helveticaNeueMedium, size: 22))
                 .foregroundColor(UIColor(.watermelon))
                 .alignment(.left)
+            
             
         }
     }
