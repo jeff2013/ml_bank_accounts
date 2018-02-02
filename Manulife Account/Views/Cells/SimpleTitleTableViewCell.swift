@@ -1,5 +1,5 @@
 //
-//  SimpleFooterTableViewCell.swift
+//  SimpleTitleTableViewCell.swift
 //  Manulife Account
 //
 //  Created by Jeff Chang on 2018-02-01.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class SimpleFooterTableViewCell: UITableViewCell {
+class SimpleTitleTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var totalTitleLabel: UILabel!
-    @IBOutlet weak var totalAmountLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,12 +25,11 @@ class SimpleFooterTableViewCell: UITableViewCell {
     
 }
 
-extension SimpleFooterTableViewCell: ConfigurableTableViewCellProtocol {
+extension SimpleTitleTableViewCell: ConfigurableTableViewCellProtocol {
     
-    typealias configurableObject = Double
+    typealias configurableObject = String
     
     func configureCell(object: configurableObject) {
-        totalTitleLabel.attributedText = "Accounts.Total".localized.styled(.cellTitle)
-        totalAmountLabel.attributedText = object.formatCurrency(of: TransactionType.none).styled(.greyTitle19pt)
+        titleLabel.attributedText = object.styled(.greyLeftBold18)
     }
 }

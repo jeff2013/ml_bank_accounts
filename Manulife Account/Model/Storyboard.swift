@@ -11,4 +11,5 @@ import Foundation
 public enum Storyboard: String {
     case launchViewController = "LaunchViewController"
     case accountsViewController = "AccountsViewController"
+    case accountDetailViewController = "AccountDetailViewController"
 }

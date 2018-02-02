@@ -39,6 +39,13 @@
 		5F0D93012024026300D9FBEF /* SimpleFooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D92FF2024026300D9FBEF /* SimpleFooterTableViewCell.swift */; };
 		5F0D93022024026300D9FBEF /* SimpleFooterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D93002024026300D9FBEF /* SimpleFooterTableViewCell.xib */; };
 		5F0D93042024190B00D9FBEF /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D93032024190B00D9FBEF /* DoubleExtension.swift */; };
+		5F0D9308202428EF00D9FBEF /* AccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D9307202428EF00D9FBEF /* AccountDetailViewController.swift */; };
+		5F0D930A202428FE00D9FBEF /* AccountDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D9309202428FE00D9FBEF /* AccountDetailViewController.storyboard */; };
+		5F0D930E20243E4600D9FBEF /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D930C20243E4600D9FBEF /* TransactionTableViewCell.swift */; };
+		5F0D930F20243E4600D9FBEF /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D930D20243E4600D9FBEF /* TransactionTableViewCell.xib */; };
+		5F0D93122024449E00D9FBEF /* SimpleTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D93102024449E00D9FBEF /* SimpleTitleTableViewCell.swift */; };
+		5F0D93132024449E00D9FBEF /* SimpleTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D93112024449E00D9FBEF /* SimpleTitleTableViewCell.xib */; };
+		5F0D93152024472D00D9FBEF /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D93142024472D00D9FBEF /* DateExtension.swift */; };
 		9647F050DBA4C71031B8BB89 /* Pods_Manulife_Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48634F8B316BE1FADF7C8A98 /* Pods_Manulife_Account.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +86,13 @@
 		5F0D92FF2024026300D9FBEF /* SimpleFooterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFooterTableViewCell.swift; sourceTree = "<group>"; };
 		5F0D93002024026300D9FBEF /* SimpleFooterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleFooterTableViewCell.xib; sourceTree = "<group>"; };
 		5F0D93032024190B00D9FBEF /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		5F0D9307202428EF00D9FBEF /* AccountDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailViewController.swift; sourceTree = "<group>"; };
+		5F0D9309202428FE00D9FBEF /* AccountDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountDetailViewController.storyboard; sourceTree = "<group>"; };
+		5F0D930C20243E4600D9FBEF /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		5F0D930D20243E4600D9FBEF /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
+		5F0D93102024449E00D9FBEF /* SimpleTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTitleTableViewCell.swift; sourceTree = "<group>"; };
+		5F0D93112024449E00D9FBEF /* SimpleTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleTitleTableViewCell.xib; sourceTree = "<group>"; };
+		5F0D93142024472D00D9FBEF /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		7DE6E9CD45A6A19805C2DF01 /* Pods-Manulife Account.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manulife Account.release.xcconfig"; path = "Pods/Target Support Files/Pods-Manulife Account/Pods-Manulife Account.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +170,8 @@
 				5F0D92CB2023AFD200D9FBEF /* LaunchViewController.storyboard */,
 				5F0D92D22023B31400D9FBEF /* AccountsViewController.swift */,
 				5F0D92D42023B33900D9FBEF /* AccountsViewController.storyboard */,
+				5F0D9307202428EF00D9FBEF /* AccountDetailViewController.swift */,
+				5F0D9309202428FE00D9FBEF /* AccountDetailViewController.storyboard */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -184,6 +200,7 @@
 				5F0D92D82023BE3200D9FBEF /* StringExtension.swift */,
 				5F0D92E92023D21100D9FBEF /* UITableViewExtension.swift */,
 				5F0D93032024190B00D9FBEF /* DoubleExtension.swift */,
+				5F0D93142024472D00D9FBEF /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -252,6 +269,10 @@
 				5F0D92FA2023E9D600D9FBEF /* SimpleSectionTableViewCell.xib */,
 				5F0D92FF2024026300D9FBEF /* SimpleFooterTableViewCell.swift */,
 				5F0D93002024026300D9FBEF /* SimpleFooterTableViewCell.xib */,
+				5F0D930C20243E4600D9FBEF /* TransactionTableViewCell.swift */,
+				5F0D930D20243E4600D9FBEF /* TransactionTableViewCell.xib */,
+				5F0D93102024449E00D9FBEF /* SimpleTitleTableViewCell.swift */,
+				5F0D93112024449E00D9FBEF /* SimpleTitleTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -327,8 +348,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F0D930A202428FE00D9FBEF /* AccountDetailViewController.storyboard in Resources */,
 				5F0D92CC2023AFD200D9FBEF /* LaunchViewController.storyboard in Resources */,
+				5F0D930F20243E4600D9FBEF /* TransactionTableViewCell.xib in Resources */,
 				5F0D92FC2023E9D600D9FBEF /* SimpleSectionTableViewCell.xib in Resources */,
+				5F0D93132024449E00D9FBEF /* SimpleTitleTableViewCell.xib in Resources */,
 				5F0D92D72023BDB200D9FBEF /* Localizable.strings in Resources */,
 				5F0D92B52023A9D800D9FBEF /* LaunchScreen.storyboard in Resources */,
 				5F0D92B22023A9D800D9FBEF /* Assets.xcassets in Resources */,
@@ -398,21 +422,25 @@
 				5F0D92C82023AFAA00D9FBEF /* Storyboard.swift in Sources */,
 				5F0D92E12023C3C500D9FBEF /* Transaction.swift in Sources */,
 				5F0D92CA2023AFC500D9FBEF /* LaunchViewController.swift in Sources */,
+				5F0D93122024449E00D9FBEF /* SimpleTitleTableViewCell.swift in Sources */,
 				5F0D93012024026300D9FBEF /* SimpleFooterTableViewCell.swift in Sources */,
 				5F0D92B02023A9D800D9FBEF /* Manulife_Account.xcdatamodeld in Sources */,
 				5F0D92D12023B04000D9FBEF /* KeychainWrapper.swift in Sources */,
 				5F0D92FB2023E9D600D9FBEF /* SimpleSectionTableViewCell.swift in Sources */,
 				5F0D92EA2023D21100D9FBEF /* UITableViewExtension.swift in Sources */,
+				5F0D9308202428EF00D9FBEF /* AccountDetailViewController.swift in Sources */,
 				5F0D92EE2023D2B000D9FBEF /* ConfigurableCell.swift in Sources */,
 				5F0D92AA2023A9D800D9FBEF /* ViewController.swift in Sources */,
 				5F0D92E32023C48800D9FBEF /* BankService.swift in Sources */,
 				5F0D92DD2023C0B000D9FBEF /* Account.swift in Sources */,
 				5F0D92F22023DFE100D9FBEF /* Color.swift in Sources */,
 				5F0D92D92023BE3200D9FBEF /* StringExtension.swift in Sources */,
+				5F0D930E20243E4600D9FBEF /* TransactionTableViewCell.swift in Sources */,
 				5F0D92EC2023D27000D9FBEF /* ReusableView.swift in Sources */,
 				5F0D93042024190B00D9FBEF /* DoubleExtension.swift in Sources */,
 				5F0D92CF2023B02100D9FBEF /* UIViewExtensions.swift in Sources */,
 				5F0D92F02023DFBA00D9FBEF /* Font.swift in Sources */,
+				5F0D93152024472D00D9FBEF /* DateExtension.swift in Sources */,
 				5F0D92E72023D14400D9FBEF /* AccountTableViewCell.swift in Sources */,
 				5F0D92D32023B31400D9FBEF /* AccountsViewController.swift in Sources */,
 				5F0D92A82023A9D800D9FBEF /* AppDelegate.swift in Sources */,

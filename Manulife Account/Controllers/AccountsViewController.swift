@@ -111,8 +111,13 @@ class AccountsViewController: UIViewController {
 extension AccountsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         var accountsForSection: [Account] = getAccounts(for: indexPath.section)
-        AccountTypes(rawValue: accountsForSection[indexPath.row].id)
+        let accountDetailViewController: AccountDetailViewController = AccountDetailViewController.instanceFromStoryboard(storyboard: .accountDetailViewController)
+        
+        accountDetailViewController.account = accountsForSection[indexPath.row]
+        navigationController?.pushViewController(accountDetailViewController, animated: true)
     }
     
 }

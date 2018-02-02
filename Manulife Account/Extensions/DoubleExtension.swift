@@ -8,14 +8,24 @@
 
 import Foundation
 
+enum TransactionType {
+    case none
+    case withdrawal
+}
+
 extension Double {
     
-    func formatCurrency() -> String {
+    func formatCurrency(of type: TransactionType) -> String {
         let formatter = NumberFormatter()
         formatter.locale = Locale.current
         formatter.numberStyle = .currency
         if let formattedCurrency = formatter.string(from: self as NSNumber) {
-            return formattedCurrency
+            switch type {
+            case .none:
+                return formattedCurrency
+            case .withdrawal:
+                return "-\(formattedCurrency)"
+            }
         }
         return ""
     }

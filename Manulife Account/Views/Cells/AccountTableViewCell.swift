@@ -35,6 +35,6 @@ extension AccountTableViewCell: ConfigurableTableViewCellProtocol {
     func configureCell(object: configurableObject) {
         accountNameLabel.attributedText = object.displayName.localized.styled(.cellTitle)
         accountIDLabel.attributedText = object.id != nil ? String(object.id).styled(.cellSubtitle) : "".styled(.cellSubtitle)
-        accountBalanceLabel.attributedText = object.balance > 0 ? object.balance.formatCurrency().styled(.balanceTitlePositive) : object.balance.formatCurrency().styled(.balanceTitleNegative)
+        accountBalanceLabel.attributedText = object.balance > 0 ? object.balance.formatCurrency(of: TransactionType.none).styled(.balanceTitlePositive) : object.balance.formatCurrency(of: TransactionType.none).styled(.balanceTitleNegative)
     }
 }

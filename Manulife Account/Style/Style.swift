@@ -18,6 +18,9 @@ indirect enum Style: Int {
     case greyTitle19pt
     case balanceTitlePositive
     case balanceTitleNegative
+    case greyRight19pt
+    case blueRight14pt
+    case greyLeftBold18
 }
 
 class StyleGuide {
@@ -59,7 +62,21 @@ class StyleGuide {
                 .font(UIFont(.helveticaNeueMedium, size: 22))
                 .foregroundColor(UIColor(.watermelon))
                 .alignment(.left)
-            
+        case .greyRight19pt:
+            return TextAttributes()
+                .font(UIFont(.helveticaNeueMedium, size: 19))
+                .foregroundColor(UIColor(.warmGrey))
+                .alignment(.right)
+        case .blueRight14pt:
+            return TextAttributes()
+                .font(UIFont(.helveticaNeueMedium, size: 14))
+                .foregroundColor(UIColor(.azureBlue))
+                .alignment(.right)
+        case .greyLeftBold18:
+            return TextAttributes()
+                .font(UIFont(.helveticaNeueBold, size: 18))
+                .foregroundColor(UIColor(.warmGrey))
+                .alignment(.left)
             
         }
     }
