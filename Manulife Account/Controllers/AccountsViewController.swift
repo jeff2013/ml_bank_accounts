@@ -61,9 +61,9 @@ class AccountsViewController: UIViewController {
             navigationController?.navigationBar.prefersLargeTitles = true
             navigationController?.setTitle(title: "Accounts.Navigation.Title".localized)
             title = "Accounts.Navigation.Title".localized
-            //            navigationController?.navigationBar.largeTitleTextAttributes =
-            //                [NSAttributedStringKey.font: UIFont(.helveticaNeueMedium, size: 30),
-            //                 NSAttributedStringKey.foregroundColor: UIColor(.azureBlue)]
+            navigationController?.navigationBar.largeTitleTextAttributes =
+                [NSAttributedStringKey.font: UIFont(.helveticaNeueMedium, size: 30),
+                 NSAttributedStringKey.foregroundColor: UIColor(.azureBlue)]
         } else {
             // Fallback on earlier versions
         }
@@ -105,6 +105,11 @@ class AccountsViewController: UIViewController {
             break
         }
         return accountsForSection
+    }
+    
+    @IBAction func quitAccounts(_ sender: Any) {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        delegate.showLaunchScreen()
     }
 }
 

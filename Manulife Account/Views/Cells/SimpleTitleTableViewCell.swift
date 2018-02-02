@@ -30,6 +30,6 @@ extension SimpleTitleTableViewCell: ConfigurableTableViewCellProtocol {
     typealias configurableObject = String
     
     func configureCell(object: configurableObject) {
-        titleLabel.attributedText = object.styled(.greyLeftBold18)
+        titleLabel.attributedText = object.styled(.darkLeft15pt)
     }
 }

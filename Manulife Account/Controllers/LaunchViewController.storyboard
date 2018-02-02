@@ -18,23 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZu-rl-IG7">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Manulife_logo_symbol_green" translatesAutoresizingMaskIntoConstraints="NO" id="R4N-zA-Lf6">
+                                <rect key="frame" x="16" y="139" width="343" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="WWf-aa-27G"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZu-rl-IG7">
+                                <rect key="frame" x="42" y="546" width="291" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="openApplication:" destination="03K-RZ-T45" eventType="touchUpInside" id="wgP-2h-5Gn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8M-6G-D6D">
-                                <rect key="frame" x="164" y="276" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0018556914292275906" green="0.40287947654724121" blue="0.25050526857376099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="R4N-zA-Lf6" firstAttribute="leading" secondItem="VfC-ZV-9Kn" secondAttribute="leading" constant="16" id="DO5-wY-KXc"/>
+                            <constraint firstItem="lZu-rl-IG7" firstAttribute="leading" secondItem="VfC-ZV-9Kn" secondAttribute="leading" constant="42" id="H9J-0M-E3t"/>
+                            <constraint firstItem="VfC-ZV-9Kn" firstAttribute="trailing" secondItem="R4N-zA-Lf6" secondAttribute="trailing" constant="16" id="Rc0-46-3hp"/>
+                            <constraint firstItem="VfC-ZV-9Kn" firstAttribute="bottom" secondItem="lZu-rl-IG7" secondAttribute="bottom" constant="91" id="W0m-g9-rXY"/>
+                            <constraint firstItem="R4N-zA-Lf6" firstAttribute="top" secondItem="VfC-ZV-9Kn" secondAttribute="top" constant="119" id="mZC-t6-QGR"/>
+                            <constraint firstItem="VfC-ZV-9Kn" firstAttribute="trailing" secondItem="lZu-rl-IG7" secondAttribute="trailing" constant="42" id="rIb-pe-XhI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VfC-ZV-9Kn"/>
                     </view>
                     <connections>
@@ -43,7 +53,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNY-dI-y2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="617" y="-109"/>
+            <point key="canvasLocation" x="616.79999999999995" y="-109.29535232383809"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Manulife_logo_symbol_green" width="4300" height="1436"/>
+    </resources>
 </document>

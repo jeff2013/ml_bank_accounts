@@ -46,6 +46,8 @@
 		5F0D93122024449E00D9FBEF /* SimpleTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D93102024449E00D9FBEF /* SimpleTitleTableViewCell.swift */; };
 		5F0D93132024449E00D9FBEF /* SimpleTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D93112024449E00D9FBEF /* SimpleTitleTableViewCell.xib */; };
 		5F0D93152024472D00D9FBEF /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D93142024472D00D9FBEF /* DateExtension.swift */; };
+		5F0D931820250A1900D9FBEF /* SummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D931720250A1900D9FBEF /* SummaryHeaderView.swift */; };
+		5F0D931A20250A8000D9FBEF /* SummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D931920250A8000D9FBEF /* SummaryHeaderView.xib */; };
 		9647F050DBA4C71031B8BB89 /* Pods_Manulife_Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48634F8B316BE1FADF7C8A98 /* Pods_Manulife_Account.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +95,8 @@
 		5F0D93102024449E00D9FBEF /* SimpleTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTitleTableViewCell.swift; sourceTree = "<group>"; };
 		5F0D93112024449E00D9FBEF /* SimpleTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleTitleTableViewCell.xib; sourceTree = "<group>"; };
 		5F0D93142024472D00D9FBEF /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		5F0D931720250A1900D9FBEF /* SummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryHeaderView.swift; sourceTree = "<group>"; };
+		5F0D931920250A8000D9FBEF /* SummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryHeaderView.xib; sourceTree = "<group>"; };
 		7DE6E9CD45A6A19805C2DF01 /* Pods-Manulife Account.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manulife Account.release.xcconfig"; path = "Pods/Target Support Files/Pods-Manulife Account/Pods-Manulife Account.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +183,8 @@
 		5F0D92BE2023AF4D00D9FBEF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5F0D931720250A1900D9FBEF /* SummaryHeaderView.swift */,
+				5F0D931920250A8000D9FBEF /* SummaryHeaderView.xib */,
 				5F0D92E42023D12400D9FBEF /* Cells */,
 			);
 			path = Views;
@@ -350,6 +356,7 @@
 			files = (
 				5F0D930A202428FE00D9FBEF /* AccountDetailViewController.storyboard in Resources */,
 				5F0D92CC2023AFD200D9FBEF /* LaunchViewController.storyboard in Resources */,
+				5F0D931A20250A8000D9FBEF /* SummaryHeaderView.xib in Resources */,
 				5F0D930F20243E4600D9FBEF /* TransactionTableViewCell.xib in Resources */,
 				5F0D92FC2023E9D600D9FBEF /* SimpleSectionTableViewCell.xib in Resources */,
 				5F0D93132024449E00D9FBEF /* SimpleTitleTableViewCell.xib in Resources */,
@@ -438,6 +445,7 @@
 				5F0D930E20243E4600D9FBEF /* TransactionTableViewCell.swift in Sources */,
 				5F0D92EC2023D27000D9FBEF /* ReusableView.swift in Sources */,
 				5F0D93042024190B00D9FBEF /* DoubleExtension.swift in Sources */,
+				5F0D931820250A1900D9FBEF /* SummaryHeaderView.swift in Sources */,
 				5F0D92CF2023B02100D9FBEF /* UIViewExtensions.swift in Sources */,
 				5F0D92F02023DFBA00D9FBEF /* Font.swift in Sources */,
 				5F0D93152024472D00D9FBEF /* DateExtension.swift in Sources */,

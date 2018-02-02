@@ -37,7 +37,11 @@
                         <viewLayoutGuide key="safeArea" id="MxL-17-7Fy"/>
                     </view>
                     <navigationItem key="navigationItem" title="HI" id="MFh-eW-qm3">
-                        <barButtonItem key="rightBarButtonItem" title="QUIT_P" id="qKW-dH-Fly"/>
+                        <barButtonItem key="rightBarButtonItem" title="Quit" id="qKW-dH-Fly">
+                            <connections>
+                                <action selector="quitAccounts:" destination="i0y-xc-zMo" id="vxH-cp-Pcj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="accountsTableView" destination="1Z3-Fa-GNL" id="KWD-Xn-YdE"/>

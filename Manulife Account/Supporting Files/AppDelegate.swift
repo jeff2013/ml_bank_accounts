@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        //switchToAccounts()
-        showLaunchScreen()
+        
+        KeychainWrapper.isLoggedIn() ? switchToAccounts() : showLaunchScreen()
         return true
     }
 
@@ -97,19 +97,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIView.transition(with: window!, duration: 0.3, options: .transitionFlipFromRight, animations: {
             self.window?.rootViewController = accountsViewController
         }, completion: { completed in
-            // maybe do something here
+            KeychainWrapper.setLoginStatus(with: true)
+            
         })
     }
     
-    private func showLaunchScreen() {
+    func showLaunchScreen() {
         let launchScreen: LaunchViewController = LaunchViewController.instanceFromStoryboard(storyboard: .launchViewController)
         
-        UIView.transition(with: window!, duration: 0.3, options: .transitionCrossDissolve, animations: {
+        UIView.transition(with: window!, duration: 0.3, options: .transitionFlipFromLeft, animations: {
             self.window?.rootViewController = launchScreen
         }, completion: { completed in
-            // maybe do something here
+            KeychainWrapper.setLoginStatus(with: false)
         })
-//
     }
 
 }

@@ -39,6 +39,7 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="EgN-49-Dst" firstAttribute="centerY" secondItem="8hk-1n-owL" secondAttribute="centerY" id="3Qu-hk-XfD"/>
                     <constraint firstItem="8P8-8q-4jm" firstAttribute="top" secondItem="8hk-1n-owL" secondAttribute="bottom" constant="3" id="3Ze-NW-xjL"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EgN-49-Dst" secondAttribute="trailing" constant="16" id="BHG-px-7ve"/>
                     <constraint firstAttribute="bottom" secondItem="8P8-8q-4jm" secondAttribute="bottom" constant="14.5" id="DEg-E7-JfL"/>
@@ -46,7 +47,6 @@
                     <constraint firstItem="8P8-8q-4jm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="O4R-b6-RMs"/>
                     <constraint firstItem="EgN-49-Dst" firstAttribute="leading" secondItem="8hk-1n-owL" secondAttribute="trailing" constant="8" id="RNy-G8-Ept"/>
                     <constraint firstItem="8hk-1n-owL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="myz-iF-za0"/>
-                    <constraint firstItem="EgN-49-Dst" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="nNM-3a-2yn"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

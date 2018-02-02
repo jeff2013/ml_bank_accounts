@@ -10,7 +10,7 @@ import Foundation
 
 enum Format: String {
     case regular = "MMM dd, yyyy"
-    case hashes = "yyyy-dd-mm"
+    case hashes = "yyyy-MM-dd"
 }
 
 extension DateFormatter {

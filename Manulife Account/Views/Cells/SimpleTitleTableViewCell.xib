@@ -26,12 +26,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="JGH-ns-fLb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Dxz-eL-QBb"/>
                     <constraint firstItem="JGH-ns-fLb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="jKb-Yd-zTa"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="titleLabel" destination="JGH-ns-fLb" id="8cy-mU-0gh"/>
             </connections>

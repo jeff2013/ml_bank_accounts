@@ -8,18 +8,23 @@
 
 import Foundation
 
-private let defaults = UserDefaults.standard
+class KeychainWrapper {
 
-private let loginKey = "Launch"
-
-func setLoginStatus(with value: Bool){
-    defaults.set(value, forKey: loginKey)
-}
-
-//Returns T/F if we should show the launch/login screen
-func isLoggedIn() -> Bool {
-    if let status = defaults.value(forKey: loginKey) as? Bool {
-        return status
+    static private let defaults = UserDefaults.standard
+    
+    static private let loginKey = "Launch"
+    
+    static func setLoginStatus(with value: Bool){
+        defaults.set(value, forKey: loginKey)
     }
-    return false
+    
+    //Returns T/F if we should show the launch/login screen
+    static func isLoggedIn() -> Bool {
+        if let status = defaults.value(forKey: loginKey) as? Bool {
+            return status
+        }
+        print("shiet")
+        return false
+    }
 }
+

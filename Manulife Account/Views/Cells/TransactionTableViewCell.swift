@@ -33,10 +33,10 @@ extension TransactionTableViewCell: ConfigurableTableViewCellProtocol {
     
     func configureCell(object: configurableObject) {
         
-        transactionTitleLabel.attributedText = object.description.styled(.greyTitle19pt)
+        transactionTitleLabel.attributedText = object.description.styled(.greyLeft19pt)
         
         //This is based off the assumption that there can be only two types of transaction activities, withdrawal or deposit.
-        transactionAmountLabel.attributedText = object.depositAmount != nil ? object.depositAmount.formatCurrency(of: TransactionType.none).styled(.greyTitle19pt) : object.withdrawalAmount.formatCurrency(of: TransactionType.withdrawal).styled(.greyRight19pt)
+        transactionAmountLabel.attributedText = object.depositAmount != nil ? object.depositAmount.formatCurrency(of: TransactionType.none).styled(.greyRight19pt) : object.withdrawalAmount.formatCurrency(of: TransactionType.withdrawal).styled(.greyRight19pt)
         accountNetLabel.attributedText = object.balance.formatCurrency(of: TransactionType.none).styled(.blueRight14pt)
     }
 }

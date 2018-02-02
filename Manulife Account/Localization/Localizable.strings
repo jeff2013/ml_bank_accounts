@@ -7,7 +7,7 @@
 */
 
 //General
-"General.Close";
+"General.Quit" = "Quit";
 
 //Launch
 "Launch.Open" = "Open";
@@ -17,3 +17,6 @@
 "Accounts.Type.Deposit" = "Deposit Accounts";
 "Accounts.Type.Investments" = "Investments";
 "Accounts.Total" = "TOTAL CAD $ ACCOUNTS";
+
+//Account Detail
+"Account.Detail.Balance.Title" = "CURRENT BALANCE";

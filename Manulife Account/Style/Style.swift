@@ -19,8 +19,12 @@ indirect enum Style: Int {
     case balanceTitlePositive
     case balanceTitleNegative
     case greyRight19pt
+    case greyMiddle14pt
+    case greyLeft19pt
     case blueRight14pt
-    case greyLeftBold18
+    case darkLeft15pt
+    case balanceLargePositive
+    case balanceLargeNegative
 }
 
 class StyleGuide {
@@ -67,25 +71,43 @@ class StyleGuide {
                 .font(UIFont(.helveticaNeueMedium, size: 19))
                 .foregroundColor(UIColor(.warmGrey))
                 .alignment(.right)
+        case .greyLeft19pt:
+            return TextAttributes()
+                .font(UIFont(.helveticaNeueMedium, size: 19))
+                .foregroundColor(UIColor(.warmGrey))
+                .alignment(.left)
+        case .greyMiddle14pt:
+            return TextAttributes()
+                .font(UIFont(.helveticaNeueMedium, size: 14))
+                .foregroundColor(UIColor(.warmGrey))
+                .alignment(.center)
         case .blueRight14pt:
             return TextAttributes()
                 .font(UIFont(.helveticaNeueMedium, size: 14))
                 .foregroundColor(UIColor(.azureBlue))
                 .alignment(.right)
-        case .greyLeftBold18:
+        case .darkLeft15pt:
             return TextAttributes()
-                .font(UIFont(.helveticaNeueBold, size: 18))
-                .foregroundColor(UIColor(.warmGrey))
+                .font(UIFont(.helveticaNeueMedium, size: 15))
+                .foregroundColor(UIColor(.darkTwo))
                 .alignment(.left)
+        case .balanceLargePositive:
+            return TextAttributes()
+                .font(UIFont(.helveticaNeueMedium, size: 30))
+                .foregroundColor(UIColor(.ufoGreen))
+                .alignment(.center)
+        case .balanceLargeNegative:
+            return TextAttributes()
+                .font(UIFont(.helveticaNeueMedium, size: 30))
+                .foregroundColor(UIColor(.watermelon))
+                .alignment(.center)
             
         }
     }
 }
-
 
 extension String{
     func styled(_ style: Style) -> NSAttributedString{
         return  NSAttributedString(string: self, attributes: StyleGuide.attributes(style))
     }
 }
-
