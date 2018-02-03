@@ -1,5 +1,10 @@
 # ml_bank_accounts
 
+Deployment instructions
+  - One should be able to download the repository, I've included all the pods etc (which I wouldn't do if this was a traditional project but for the sake of not having to have the user run pod install etc I just included the pods themselves)
+  - Once downloaded you should be able to open the application up, you might have to change the project signing but that's standard.
+  - This application is optimized for iOS 11 with certain styles only available in iOS 11.
+
 Frameworks used and their justifications
 
 Alamofire + Objectmapper
@@ -28,4 +33,4 @@ Additonal considerations
 
 This was actually a really fun application to create, overall I spent about 2 days of juggling this and school to complete this application.
 
-![img_4447](https://user-images.githubusercontent.com/11468183/35761690-4fbf9b96-0840-11e8-85cb-68309be5d3a8.JPG)
+![img_4447](https://user-images.githubusercontent.com/11468183/35761730-b12f77c0-0840-11e8-895b-a0bbff6a3b59.JPG)
