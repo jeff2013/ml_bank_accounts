@@ -48,6 +48,7 @@
 		5F0D93152024472D00D9FBEF /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D93142024472D00D9FBEF /* DateExtension.swift */; };
 		5F0D931820250A1900D9FBEF /* SummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D931720250A1900D9FBEF /* SummaryHeaderView.swift */; };
 		5F0D931A20250A8000D9FBEF /* SummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0D931920250A8000D9FBEF /* SummaryHeaderView.xib */; };
+		5F0D931C20253F2D00D9FBEF /* ConnectivityWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D931B20253F2D00D9FBEF /* ConnectivityWrapper.swift */; };
 		9647F050DBA4C71031B8BB89 /* Pods_Manulife_Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48634F8B316BE1FADF7C8A98 /* Pods_Manulife_Account.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		5F0D93142024472D00D9FBEF /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		5F0D931720250A1900D9FBEF /* SummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryHeaderView.swift; sourceTree = "<group>"; };
 		5F0D931920250A8000D9FBEF /* SummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryHeaderView.xib; sourceTree = "<group>"; };
+		5F0D931B20253F2D00D9FBEF /* ConnectivityWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityWrapper.swift; sourceTree = "<group>"; };
 		7DE6E9CD45A6A19805C2DF01 /* Pods-Manulife Account.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manulife Account.release.xcconfig"; path = "Pods/Target Support Files/Pods-Manulife Account/Pods-Manulife Account.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				5F0D92D02023B04000D9FBEF /* KeychainWrapper.swift */,
+				5F0D931B20253F2D00D9FBEF /* ConnectivityWrapper.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				5F0D92E72023D14400D9FBEF /* AccountTableViewCell.swift in Sources */,
 				5F0D92D32023B31400D9FBEF /* AccountsViewController.swift in Sources */,
 				5F0D92A82023A9D800D9FBEF /* AppDelegate.swift in Sources */,
+				5F0D931C20253F2D00D9FBEF /* ConnectivityWrapper.swift in Sources */,
 				5F0D92F42023E02900D9FBEF /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

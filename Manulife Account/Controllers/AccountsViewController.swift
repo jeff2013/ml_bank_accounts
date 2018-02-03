@@ -32,6 +32,10 @@ class AccountsViewController: UIViewController {
     
     var accounts: [Account] = []
     
+    /*
+     I made the assumption that deposit accounts are id's less than 18 and investments are those greater than 19
+     No distinction was made between the account numbers
+    */
     var depositAccounts: [Account] {
         get {
             return accounts.filter { (acc) -> Bool in
@@ -59,14 +63,20 @@ class AccountsViewController: UIViewController {
     func setupView() {
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
-            navigationController?.setTitle(title: "Accounts.Navigation.Title".localized)
-            title = "Accounts.Navigation.Title".localized
             navigationController?.navigationBar.largeTitleTextAttributes =
                 [NSAttributedStringKey.font: UIFont(.helveticaNeueMedium, size: 30),
                  NSAttributedStringKey.foregroundColor: UIColor(.azureBlue)]
         } else {
             // Fallback on earlier versions
+            navigationController?.navigationBar.titleTextAttributes =
+                [NSAttributedStringKey.font: UIFont(.helveticaNeueMedium, size: 18),
+                 NSAttributedStringKey.foregroundColor: UIColor(.azureBlue)]
         }
+        
+        navigationController?.navigationBar.titleTextAttributes =
+            [NSAttributedStringKey.font: UIFont(.helveticaNeueMedium, size: 18),
+             NSAttributedStringKey.foregroundColor: UIColor(.azureBlue)]
+        title = "Accounts.Navigation.Title".localized
     }
     
     func setupTableView() {
@@ -89,11 +99,14 @@ class AccountsViewController: UIViewController {
                     //no accounts retrieved, could show some sort of notification that there are none available
                 }
             } else {
-                SVProgressHUD.showError(withStatus: "PLACEHOLDER")
+                SVProgressHUD.showError(withStatus: "General.Error".localized)
             }
         }
     }
     
+    /*
+     Retrieved the correct accounts for each a given section in the accounts table
+    */
     func getAccounts(for section: Int) -> [Account] {
         var accountsForSection: [Account] = []
         switch AccountCategories(rawValue: section)! {
@@ -107,12 +120,16 @@ class AccountsViewController: UIViewController {
         return accountsForSection
     }
     
+    /*
+     Similar to a logout action
+    */
     @IBAction func quitAccounts(_ sender: Any) {
         let delegate = UIApplication.shared.delegate as! AppDelegate
         delegate.showLaunchScreen()
     }
 }
 
+//MARK :- UITableviewdelegate
 extension AccountsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -124,9 +141,9 @@ extension AccountsViewController: UITableViewDelegate {
         accountDetailViewController.account = accountsForSection[indexPath.row]
         navigationController?.pushViewController(accountDetailViewController, animated: true)
     }
-    
 }
 
+//MARK :- UITableviewDataSource
 extension AccountsViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -159,14 +176,7 @@ extension AccountsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch AccountCategories(rawValue: section)! {
-        case .deposit:
-            return depositAccounts.count
-        case .investments:
-            return investmentAccounts.count
-        default:
-            return 0
-        }
+        return getAccounts(for: section).count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

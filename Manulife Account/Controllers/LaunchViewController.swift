@@ -28,8 +28,13 @@ class LaunchViewController: UIViewController {
     }
     
     func login() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.switchToAccounts()
+        if Connectivity.isConnectedToInternet() {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.switchToAccounts()
+        } else {
+            let alert = UIAlertController(title: "General.No.Connection".localized, message: "General.No.Connection.Message".localized, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "General.Cancel".localized, style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
     }
-
 }

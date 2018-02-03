@@ -8,6 +8,10 @@
 
 //General
 "General.Quit" = "Quit";
+"General.Error" = "Error retrieving account information.";
+"General.No.Connection" = "No internet connection detected.";
+"General.No.Connection.Message" = "Please ensure your device is connected to the internet and try again.";
+"General.Cancel" = "Cancel";
 
 //Launch
 "Launch.Open" = "Open";

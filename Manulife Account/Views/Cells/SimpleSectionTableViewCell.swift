@@ -23,7 +23,6 @@ class SimpleSectionTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }
 
 extension SimpleSectionTableViewCell: ConfigurableTableViewCellProtocol {

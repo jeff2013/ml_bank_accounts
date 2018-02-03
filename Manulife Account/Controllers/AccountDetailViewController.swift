@@ -26,7 +26,6 @@ class AccountDetailViewController: UIViewController {
     
     func setupView() {
         if let account = account {
-            navigationController?.setTitle(title: account.displayName)
             title = account.displayName
         }
     }
@@ -71,6 +70,7 @@ class AccountDetailViewController: UIViewController {
     }
 }
 
+//MARK :- UITableViewDelegate
 extension AccountDetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -78,6 +78,7 @@ extension AccountDetailViewController: UITableViewDelegate {
     }
 }
 
+//MARK :- UITableViewDataSource
 extension AccountDetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -109,6 +110,4 @@ extension AccountDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return UITableViewAutomaticDimension
     }
-    
-    
 }
